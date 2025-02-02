@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Porfolio</title>
+    <link rel="icon" href="/media/favicon.ico">
 </head>
 
 <body>
@@ -26,7 +27,44 @@
     <hr>
     <main>
         <h2>Contact</h2>
-         
+        <p>To contact me, you can fill out the following form!</p>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Information</legend>
+
+                <label for="first-name">Enter your first name: </label>
+                <input type="text" name="first-name" id="first-name" required /><br />
+
+                <label for="last-name">Enter your last name: </label>
+                <input type="text" name="last-name" id="last-name" required /><br />
+
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" id="email" required />
+                <br>
+                <label for="reason">Reason for contacting me:</label>
+                <select id="reason">
+                    <optgroup label="Professional">
+                        <option>Job Opportunity</option>
+                        <option>Collaboration</option>
+                    </optgroup>
+                    <optgroup label="Personal">
+                        <option>Question</option>
+                        <option>Comment</option>
+                        <option>Other</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <label>Message:</label> <br>
+            <textarea name="textarea" rows="5" cols="50"></textarea> <br>
+            <button type="submit">Send</button> <br>
+        </form>
+
+        <br>
+        <div id="contact-other">
+            Other ways to contact me:
+            <address>addutta@ucsd.edu</address>
+            Phone number: <span id="phone">858-322-9895</span>
+        </div>
     </main>
     <hr>
     <footer>
