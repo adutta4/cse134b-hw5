@@ -7,7 +7,9 @@
 </head>
 
 <body>
-    <noscript>This message is displayed when Javascript is disabled on the website.</noscript>
+    <noscript>Warning! Javscript is currently unavailable in your browser.
+        All functions on this website may not work unless Javascript is enabled.
+    </noscript>
     <header>
         <hgroup>
             <h1>Aditi's Portfolio</h1>
@@ -23,15 +25,16 @@
                 <li><a href="experiments.html">Experiments</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <search>
+                <form action="./search/">
+                  <label for="movie">Find in site:</label>
+                  <input type="search" id="movie" name="q" />
+                  <button type="submit">Search</button>
+                </form>
+              </search>
         </nav>
 
-        <search>
-            <form action="./search/">
-              <label for="movie">Find in site:</label>
-              <input type="search" id="movie" name="q" />
-              <button type="submit">Search</button>
-            </form>
-          </search>
+        
     </header>
 
     <hr>
