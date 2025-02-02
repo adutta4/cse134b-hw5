@@ -52,7 +52,7 @@
         <h4>Attempt 2: Custom <abbr>HTML</abbr> tag</h4>
         <p>This element only prints to the console! You can press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>
         to quickly reach the console.</p>
-
+        <hello-world></hello-world>
     </main>
     <hr>
     <footer>
@@ -70,6 +70,16 @@
         ctx.font = "bold 48px serif";
         ctx.strokeText("Hello world", 50, 100);
     </script>
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                console.log("Hello world!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+
 </body>
 
 </html>
