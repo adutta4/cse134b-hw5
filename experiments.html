@@ -26,30 +26,46 @@
     <hr>
     <main>
         <h2>Experiments</h2>
-         <h3>Experiment 1 - Testing Audio and Video Content</h3>
-         <p>Video Attempt 1 - Embedding Youtube link to watch a video</p>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/yOo_ZUVU_O8?si=2H7JN5Sqgexg8LdE" title="YouTube video player" 
-         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-         </iframe>
-         <br> 
-         <p>Video Attempt 2 - using the <code>video</code> tag in <abbr>HTML</abbr> to watch a video</p>
-         <video controls width="560">
+        <h3>Experiment 1 - Testing Audio and Video Content</h3>
+        <p>Video Attempt 1 - Embedding Youtube link to watch a video</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yOo_ZUVU_O8?si=2H7JN5Sqgexg8LdE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <br>
+
+        <p>Video Attempt 2 - using the <code>video</code> tag in <abbr>HTML</abbr> to watch a video</p>
+        <video controls width="560">
             <source src="/media/FunnyR.mp4" type="video/mp4" />
         </video>
+
         <p>Audio - Wilhelm Scream</p>
         <audio controls>
             <source src="/media/Wilhelm1.mp3" type="audio/mp3">
-          </audio>
-            <h3>Canvas</h3>
-        <canvas width="130" height="120">
-            An alternative text describing what your canvas displays.
-          </canvas>
+        </audio>
+
+        <h3>Experiment 2: Rendering Hello World </h3>
+        <p>Attempt 1: Using <code>&lt;canvas></code></p>
+        <canvas width="300" height="200" id="canvas"></canvas>
+        <p>Attempt 2: Custom <abbr>HTML</abbr> tag</p>
     </main>
     <hr>
     <footer>
         <p>© 2025 Aditi Dutta</p>
     </footer>
+
+    <script>
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(40, 110);
+        ctx.lineTo(300, 110);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.font = "bold 48px serif";
+        ctx.strokeText("Hello world", 50, 100);
+    </script>
 </body>
 
 </html>
