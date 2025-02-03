@@ -3,8 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Portfolio Website for Aditi Dutta">
+    <meta name="keywords" content="HTML, Bioinformatics, Web Development">
+    <meta name="author" content="Aditi Dutta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Porfolio</title>
     <link rel="icon" href="/media/favicon.ico">
+    <style>
+        bio-block {
+            display: block;
+            background-color: #ffe8e8;
+            font-family: Arial, sans-serif;
+            margin: 4em;
+            padding: 3em;
+            font-family: 'Segoe UI', sans-serif;
+            border: #58030350 2px solid;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,8 +50,16 @@
 
     <main>
         <section class="bio">
+            <search>
+                <form action="">
+                    <label for="find">Find in site:</label>
+                    <input type="search" id="find" name="q">
+                    <button type="submit">Search</button>
+                </form>
+            </search>
             <h2>Introduction</h2>
-            <p>Hello! My name is <strong>Aditi Dutta</strong>. I was born and raised in San Diego, and I am a fourth
+            <bio-block>Hello! My name is <strong>Aditi Dutta</strong>. I was born and raised in San Diego, and I am a
+                fourth
                 year
                 bioinformatics major at UCSD. I am very interested in the intersection of biology and computer science,
                 especially in the context of human diseases. Outside of my academic interests, I also love film and film
@@ -50,15 +73,15 @@
                     <path d="M16.61,14A5,5,0,0,1,14,16.61a5.07,5.07,0,0,1-3.9,0A5,5,0,0,1,7.39,14"></path>
                 </svg>
 
-            </p>
-            <picture>
-                <source srcset="/media/aditi.jpg" media="(min-width: 600px)" height="250">
-                <img src="/media/aditi-smaller.jpg" alt="Aditi in front of Geisel" width="200">
-            </picture>
-            <blockquote cite="https://www.goodreads.com/quotes?page=3">
-                <p>“Sometimes the questions are complicated and the answers are simple.”
-                —Dr. Seuss</p>
-            </blockquote>
+                </p>
+                <picture>
+                    <source srcset="/media/aditi.jpg" media="(min-width: 600px)" height="250">
+                    <img src="/media/aditi-smaller.jpg" alt="Aditi in front of Geisel" width="200">
+                </picture>
+                <blockquote cite="https://www.goodreads.com/quotes?page=3">
+                    <p>“Sometimes the questions are complicated and the answers are simple.”
+                        —Dr. Seuss</p>
+                </blockquote>
         </section>
     </main>
 
