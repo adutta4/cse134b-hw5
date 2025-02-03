@@ -6,7 +6,8 @@
     <title>Personal Porfolio</title>
     <link rel="icon" href="/media/favicon.ico">
     <style>
-        td, th {
+        td,
+        th {
             border: 1px solid black;
         }
     </style>
@@ -34,19 +35,19 @@
         <h2>Education and Courses</h2>
         <p>I am in my fourth year at UCSD, and plan to graduate in June, 2025. Throughout my time at UCSD,
             I have taken courses to learn about important topics in computer science and in biology.
-    </p>
-        <details>
-            <summary>
+        </p>
+        <section>
+            <h3>
                 More information on courses
-            </summary>
+            </h3>
             <table>
                 <caption>
                     Relevant Courses
                 </caption>
                 <colgroup>
-                    <col span="2" class="course-info"/>
-                    <col span="1" class="my-course"/>
-                  </colgroup>
+                    <col span="2" class="course-info" />
+                    <col span="1" class="my-course" />
+                </colgroup>
                 <tr>
                     <th scope="col">Course Number</th>
                     <th scope="col">Course Name</th>
@@ -78,7 +79,15 @@
                     <td>Fall 2024</td>
                 </tr>
             </table>
-        </details>
+
+            <template id="class-row">
+                <tr>
+                    <td class="class-num"></td>
+                    <td class="class-name"></td>
+                    <td class="class-taken"></td>
+                </tr>
+            </template>
+        </section>
     </main>
     <hr>
     <footer>
