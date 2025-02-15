@@ -1,14 +1,44 @@
-html {
-    background-color: #dfe1e3;
+:root {
+    --main-bg-color: #eaecee;
+    --main-text-color: #052f3f;
+    font-family: 'Segoe UI', 'Open Sans', 'Arial', sans-serif;
+}
+
+@font-face {
+    font-family: "DeliciousHandrawn";
+    src:
+        url("fonts/DeliciousHandrawn/DeliciousHandrawn-Regular.ttf") format('truetype'),
+}
+
+@font-face {
+    font-family: "Sacramento";
+    src:
+        url("fonts/Sacramento/Sacramento-Regular.ttf") format('truetype'),
+}
+
+body {
+    background-color: var(--main-bg-color);
 }
 
 h1 {
     text-align: center;
-    font-family: Georgia, serif;
+    font-family: 'Sacramento', 'Segoe UI', 'Arial', sans-serif;
+    font-size: 2.5em;
+    color:#052f3f;
+}
+
+h2 {
+    color: color-mix(in srgb, #052f3f 90%, var(--main-bg-color) 10%);
+    font-family: "DeliciousHandrawn", 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: var(--main-text-color);
 }
 
 nav {
-    background-color: #c2cad0;
+    background-color: color-mix(in srgb, #052f3f 70%, white 30%);
 }
 
 nav ul {
@@ -25,7 +55,10 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: #244855;
-    font-size: 1.5em;
+    color: var(--main-bg-color);
+    font-size: 1.25em;
 }
 
+nav li:hover {
+    background-color: #1b2125;
+}
