@@ -155,6 +155,32 @@ hr {
     margin-right: 0;
 }
 
+#smiley {
+    animation: changeColors 5s infinite;
+}
+
+@keyframes changeColors {
+    0% {
+        fill: pink;
+    }
+
+    25% {
+        fill: plum;
+    }
+
+    50% {
+        fill: orchid;
+    }
+
+    75% {
+        fill: blueviolet;
+    }
+
+    100% {
+        fill: pink;
+    }
+}
+
 @media (max-width: 480px) {
     nav {
         display: inline-block;
