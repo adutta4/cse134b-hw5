@@ -61,6 +61,7 @@ nav li a {
 
 nav li:hover {
     background-color: #1b2125;
+    transition: all 1s ease-out;
 }
 
 #bio-block {
@@ -69,28 +70,13 @@ nav li:hover {
     border-radius: 5em;
     border-style: outset;
     border-color: var(--main-text-color);
-}
-
-@media (max-width: 500px) {
-    nav {
-        display: inline-block;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0em;
-    }
-
-    textarea, input {
-        width: 100%;
-    }
+    animation: example 5s linear 2s infinite alternate;
 }
 
 form {
     background-color: #afbec4;
     margin: 2vw;
-    padding: 1.5vh;
+    padding: 1.5dvh;
     border-radius: 1em;
 }
 
@@ -98,6 +84,7 @@ button,
 input,
 select,
 textarea {
+    padding: 0.25em;
     font-family: inherit;
     font-size: 100%;
     border-radius: 0.5em;
@@ -111,4 +98,43 @@ fieldset {
     border-radius: 1em;
     border-style: outset;
     border-color: var(--main-text-color);
+}
+
+table,
+th,
+td {
+    border: 1px outset;
+    border-radius: 0.25em;
+    border-color: var(--main-text-color, black);
+}
+
+th {
+    color: var(--main-text-color, black);
+}
+
+aside {
+    border: outset;
+    display: flex;
+    float: right;
+    transform: rotate(8deg);
+    width: 30%;
+    background-color: rgb(211, 214, 233);
+    margin: 1em;
+}
+
+@media (max-width: 620px) {
+    nav {
+        display: inline-block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0em;
+    }
+
+    textarea,
+    input {
+        width: 100%;
+    }
 }
