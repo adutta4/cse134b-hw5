@@ -55,17 +55,18 @@ nav ul {
 nav li {
     padding: 1em;
     text-decoration: none;
-}
 
-nav li a {
-    text-decoration: none;
-    color: var(--main-bg-color, white);
-    font-size: 1.25em;
-}
+    /* Nested css */
+    &>a {
+        text-decoration: none;
+        color: var(--main-bg-color, white);
+        font-size: 1.25em;
+    }
 
-nav li:hover {
-    background-color: #1b2125;
-    transition: all 1s ease-out;
+    &:hover {
+        background-color: #1b2125;
+        transition: all 1s ease-out;
+    }
 }
 
 bio-block {
@@ -87,12 +88,13 @@ dl {
     flex-wrap: nowrap;
     justify-content: center;
     margin: 2em;
-}
 
-#tools img {
-    width: 3rem;
-    border-radius: 2em;
-    object-fit: fill;
+    /* Nested css  */
+    &>img {
+        width: 3rem;
+        border-radius: 2em;
+        object-fit: fill;
+    }
 }
 
 form {
