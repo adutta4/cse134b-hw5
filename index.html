@@ -17,7 +17,7 @@
         All functions on this website may not work unless Javascript is enabled.
     </noscript>
     <header>
-            <h1>Aditi's Portfolio</h1>
+        <h1>Aditi's Portfolio</h1>
 
         <nav>
             <ul>
@@ -36,9 +36,8 @@
 
     <main>
         <h2>Introduction</h2>
-        <div id="bio-block">Hello! My name is <strong>Aditi Dutta</strong>. I was born and raised in San Diego, and I am a
-            fourth
-            year
+        <bio-block>Hello! My name is <strong>Aditi Dutta</strong>. I was born and raised in San Diego, and I am
+            a fourth year
             bioinformatics major at UCSD. I am very interested in the intersection of biology and computer science,
             especially in the context of human diseases. Outside of my academic interests, I also love film and film
             history,
@@ -52,13 +51,15 @@
             </svg>
             <br><br>
             <picture>
-                <source srcset="/media/aditi.jpg" media="(min-width: 600px)" height="250">
-                <img src="/media/aditi-smaller.jpg" alt="Aditi in front of Geisel" width="200">
+                <source media="(min-width: 650px)" srcset="/media/aditi.jpg">
+                <source media="(min-width: 465px)" srcset="/media/aditi-smaller.jpg">
+                <img class="" src="/media/aditi-smaller.jpg" alt="Picture of Aditi in front of Geisel library">
             </picture>
             <blockquote cite="https://www.goodreads.com/quotes?page=3">
                 <p>“Sometimes the questions are complicated and the answers are simple.”
                     —Dr. Seuss</p>
             </blockquote>
+        </bio-block>
         </div>
     </main>
 
