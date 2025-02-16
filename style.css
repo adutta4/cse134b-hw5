@@ -17,14 +17,14 @@
 }
 
 body {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color, white);
 }
 
 h1 {
     text-align: center;
     font-family: 'Sacramento', 'Segoe UI', 'Arial', sans-serif;
     font-size: 2.5em;
-    color:#052f3f;
+    color: #052f3f;
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-    color: var(--main-text-color);
+    color: var(--main-text-color, darkblue);
 }
 
 nav {
@@ -55,10 +55,60 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: var(--main-bg-color);
+    color: var(--main-bg-color, white);
     font-size: 1.25em;
 }
 
 nav li:hover {
     background-color: #1b2125;
+}
+
+#bio-block {
+    margin: 2em;
+    padding: 2em;
+    border-radius: 5em;
+    border-style: outset;
+    border-color: var(--main-text-color);
+}
+
+@media (max-width: 500px) {
+    nav {
+        display: inline-block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0em;
+    }
+
+    textarea, input {
+        width: 100%;
+    }
+}
+
+form {
+    background-color: #afbec4;
+    margin: 2vw;
+    padding: 1.5vh;
+    border-radius: 1em;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    border-radius: 0.5em;
+}
+
+legend {
+    color: var(--main-text-color);
+}
+
+fieldset {
+    border-radius: 1em;
+    border-style: outset;
+    border-color: var(--main-text-color);
 }
