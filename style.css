@@ -50,11 +50,14 @@ nav ul {
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
+    padding-left: 0em;
 }
 
-nav li {
+nav ul li {
     padding: 1em;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
 
     /* Nested css */
     &>a {
@@ -191,28 +194,37 @@ figure img {
     }
 }
 
+/* Image and form styling for mobile */
 @media (max-width: 480px) {
-    nav {
-        display: inline-block;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0em;
-    }
-
     textarea,
     input {
         width: 95%;
     }
 
-    figure > img {
+    figure>img {
         width: 90%;
     }
 }
 
-@media (max-width: 767px) {
+/* Set nav bar for both tablet and phone size */
+@media (max-width: 628px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0em;
+        font-size: .8em;
+
+        &li {
+            margin: 0em;
+            padding: 0em;
+        }
+    }
+}
+
+/* Image styling for tablet */
+@media (max-width: 640px) {
     figure img {
         width: 95%;
     }
