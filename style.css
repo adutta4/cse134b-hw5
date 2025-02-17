@@ -69,6 +69,10 @@ nav li {
     }
 }
 
+ol li:has(h3) {
+    text-shadow: color(display-p3 0.03 0.03 0.148 / 0.4) 1px 1px;
+}
+
 bio-block {
     display: block;
     margin: 2em;
@@ -171,7 +175,7 @@ hr {
     }
 
     50% {
-        fill: orchid;
+        fill: lightgreen;
     }
 
     75% {
