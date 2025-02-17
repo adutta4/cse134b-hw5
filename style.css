@@ -150,7 +150,7 @@ aside {
     margin: 1em;
 }
 
-img {
+picture img {
     max-width: 35dvw;
     object-fit: contain;
     object-position: center;
@@ -159,6 +159,10 @@ img {
 hr {
     margin-left: 0;
     margin-right: 0;
+}
+
+figure img {
+    width: 40dvw;
 }
 
 #smiley {
@@ -202,6 +206,14 @@ hr {
     input {
         width: 95%;
     }
+
+    figure > img {
+        width: 90%;
+    }
 }
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    figure img {
+        width: 95%;
+    }
+}
