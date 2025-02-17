@@ -73,7 +73,9 @@ nav ul li {
 }
 
 ol li:has(h3) {
-    text-shadow: color(display-p3 0.03 0.03 0.148 / 0.4) 1px 1px;
+    h3{
+        text-shadow: color(display-p3 0.03 0.03 0.148 / 0.4) 1px 1px;
+    }
 }
 
 bio-block {
@@ -208,6 +210,9 @@ figure img {
 
 /* Set nav bar for both tablet and phone size */
 @media (max-width: 628px) {
+    nav {
+        touch-action: none;
+    }
     nav ul {
         flex-direction: row;
         flex-wrap: wrap;
@@ -229,3 +234,12 @@ figure img {
         width: 95%;
     }
 }
+
+/* Styling for desktop */
+@media screen and (min-width: 1280px) {
+    img {
+        width: 60dvw;
+    }
+
+
+  }
