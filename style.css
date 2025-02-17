@@ -92,6 +92,19 @@ dl {
     margin: 2em;
 }
 
+/* Scoped CSS */
+@scope (figure) {
+    img {
+      border: 2px dotted black;
+      background-color: blue;
+      border-radius: 1rem;
+    }
+
+    figcaption{
+        text-decoration: underline;
+    }
+  }  
+
 #tools {
     display: flex;
     flex-wrap: nowrap;
@@ -99,7 +112,7 @@ dl {
     margin: 2em;
 
     /* Nested css  */
-    &>img {
+    img {
         width: 3rem;
         border-radius: 2em;
         object-fit: fill;
@@ -240,6 +253,4 @@ figure img {
     img {
         width: 60dvw;
     }
-
-
   }
