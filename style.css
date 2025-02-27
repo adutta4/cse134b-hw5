@@ -73,7 +73,7 @@ nav ul li {
 }
 
 ol li:has(h3) {
-    h3{
+    h3 {
         text-shadow: color(display-p3 0.03 0.03 0.148 / 0.4) 1px 1px;
     }
 }
@@ -95,15 +95,15 @@ dl {
 /* Scoped CSS */
 @scope (figure) {
     img {
-      border: 2px dotted black;
-      background-color: blue;
-      border-radius: 1rem;
+        border: 2px dotted black;
+        background-color: blue;
+        border-radius: 1rem;
     }
 
-    figcaption{
+    figcaption {
         text-decoration: underline;
     }
-  }  
+}
 
 #tools {
     display: flex;
@@ -211,6 +211,7 @@ figure img {
 
 /* Image and form styling for mobile */
 @media (max-width: 480px) {
+
     textarea,
     input {
         width: 95%;
@@ -226,6 +227,7 @@ figure img {
     nav {
         touch-action: none;
     }
+
     nav ul {
         flex-direction: row;
         flex-wrap: wrap;
@@ -253,4 +255,24 @@ figure img {
     img {
         width: 60dvw;
     }
-  }
+}
+
+#error {
+    color: red;
+    font-weight: bolder;
+}
+
+#info {
+    color: red;
+    font-weight: bolder;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.req-star {
+    color: red;
+    font-weight: bolder;
+}

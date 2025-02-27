@@ -36,20 +36,23 @@
             <fieldset>
                 <legend><strong>Information</strong></legend>
 
-                <label for="name">Enter your name: </label><br>
+                <label for="name">Enter your name: </label><span class='req-star'>*</span><br>
                 <input type="text" name="name" id="name" required><br><br>
 
-                <label for="email">Enter your email: </label><br>
+                <label for="email">Enter your email: </label><span class='req-star'>*</span><br>
                 <input type="email" name="email" id="email" required>
-                <br><br>
+                <br>
             </fieldset>
+            <br>
             <fieldset>
                 <legend><strong>Comments</strong></legend>
-                <label>Enter your comments here:</label> <br>
+                <label>Enter your comments here: </label><span class='req-star'>*</span> <br>
                 <textarea name="textarea" rows="5" cols="50"></textarea> <br>
                 <input type="hidden" name="possible_bot" value="true">
             </fieldset>
-            <br>
+            
+            <output name="error" id="error">Error message output placeholder</output>
+            <output name="info" id="info">Info output placeholder</output><br>
             <button type="submit">Send</button> <br>
         </form>
 
