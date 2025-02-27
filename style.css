@@ -270,9 +270,29 @@ figure img {
 form {
     display: flex;
     flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+    align-content: center;
 }
 
 .req-star {
     color: red;
     font-weight: bolder;
+}
+
+#submit-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button {
+    background-color: var(--main-bg-color);
+    width: 10em;
+    align-items: center;
+    border-style: outset;
+    border-color: var(--main-text-color);
+}
+
+#submit-button:hover {
+    background-color: #a3a3a3;
 }
