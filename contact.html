@@ -32,45 +32,22 @@
     <main>
         <h2>Contact</h2>
         <p>To contact me, you can fill out the following form!</p>
-        <form action="https://reqres.in/api/test" method="post">
+        <form action="https://httpbin.org/post" method="post">
             <fieldset>
                 <legend><strong>Information</strong></legend>
 
-                <label for="first-name">Enter your first name: </label>
-                <input type="text" name="first-name" id="first-name" required><br><br>
+                <label for="name">Enter your name: </label><br>
+                <input type="text" name="name" id="name" required><br><br>
 
-                <label for="last-name">Enter your last name: </label>
-                <input type="text" name="last-name" id="last-name" required><br><br>
-
-                <label for="email">Enter your email: </label>
+                <label for="email">Enter your email: </label><br>
                 <input type="email" name="email" id="email" required>
                 <br><br>
-                <label for="reason">Reason for contacting me:</label>
-                <select id="reason">
-                    <option value="">--Please choose an option--</option>
-                    <optgroup label="Professional">
-                        <option>Job Opportunity</option>
-                        <option>Collaboration</option>
-                    </optgroup>
-                    <optgroup label="Personal">
-                        <option>Question</option>
-                        <option>Comment</option>
-                        <option>Other</option>
-                    </optgroup>
-                </select>
-                <br><br>
-                <label for="contact-method">Preferred Contact Method (for the future):</label>
-                <input list="contact-methods" id="contact-method" name="contact-method">
-                <datalist id="contact-methods">
-                    <option value="Phone">
-                    <option value="Email">
-                    <option value="Text Message">
-                </datalist>
             </fieldset>
             <fieldset>
-                <legend><strong>Message</strong></legend>
-                <label>Enter your message here:</label> <br>
+                <legend><strong>Comments</strong></legend>
+                <label>Enter your comments here:</label> <br>
                 <textarea name="textarea" rows="5" cols="50"></textarea> <br>
+                <input type="hidden" name="possible_bot" value="true">
             </fieldset>
             <br>
             <button type="submit">Send</button> <br>
