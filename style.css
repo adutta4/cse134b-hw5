@@ -331,3 +331,11 @@ form {
         background-color: white;
     }
 }
+
+.text-limit {
+    background-color: rgb(245, 214, 114);
+}
+
+.text-final {
+    background-color: lightcoral;
+}
