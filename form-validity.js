@@ -1,4 +1,4 @@
-let pattern = /^[a-zA-Z0-9 .,?!-]*$/;
+let pattern = /^[a-zA-Z0-9 ,.!?]*$/;
 
 let form = document.getElementById("contact-form");
 let userName = document.getElementById("name");
@@ -33,7 +33,7 @@ comments.addEventListener("input", function (event) {
     }
 })
 
-comments.addEventListener('input', function() {
+comments.addEventListener('input', function () {
     let text = comments.value;
     const count = text.length;
     commentCount.textContent = `Character count: ${count}`;
@@ -55,12 +55,29 @@ comments.addEventListener('input', function() {
     if (count > 500) {
         error.value = "Error: Comments exceed allowable length.";
     }
-  });
+});
 
-form.addEventListener('submit', function(event) {
-    isValid = true;
+userName.addEventListener('input', function () {
+    if (!userName.checkValidity()) {
+        userName.setCustomValidity("Please enter a valid name!");
+    }
+    if (userName.checkValidity()) {
+        userName.setCustomValidity("");
+    }
+});
+
+email.addEventListener('input', function() {
+    if (email.checkValidity()) {
+        email.setCustomValidity("");
+    }
+})
+
+form.addEventListener('submit', function (event) {
     event.preventDefault();
-    if(userName.value.length < 2) {
+    // form_errors = [];
+    let isValid = true;
+
+    if (userName.value.length < 2) {
         userName.setCustomValidity("Please enter your name.");
         form_errors.push({
             field: "name",
@@ -69,26 +86,33 @@ form.addEventListener('submit', function(event) {
         isValid = false;
     };
 
-    if (!email.checkValidity()) {
+    if (email.validity.typeMismatch) {
         email.setCustomValidity("Please enter a valid email.");
-        if (email.value.length == 0){
-            form_errors.push({
-                field: "email",
-                error: "No email was entered",
-            })
-        }
-        else {form_errors.push({
-            field: "email",
+        form_errors.push({
+            field: email,
             error: "Invalid email address entered",
-        });}
+        });
         isValid = false;
-    }
+    };
 
-    if(!comments.value.length == 0) {
+    if (comments.value.length == 0) {
         comments.setCustomValidity("Comments are required. Please follow the given guidelines.");
         form_errors.push({
             field: "comments",
             error: "Comments were left blank on submit.",
         });
+        isValid = false;
+    };
+
+    if (isValid) {
+        console.log(form_errors);
+        if (form_errors.length > 0) {
+            formErrorField = document.createElement("input");
+            formErrorField.type = "hidden";
+            formErrorField.name = 'form_errors';
+            formErrorField.value = JSON.stringify(form_errors);
+            form.appendChild(formErrorField);
+        }
+        form.submit();
     }
 });
