@@ -37,7 +37,7 @@
                 <legend><strong>Information</strong></legend>
 
                 <label for="name">Enter your name: </label><span class='req-star'>*</span><br>
-                <input type="text" name="name" id="name" minlength="2" required><br><br>
+                <input type="text" name="name" id="name" minlength="2" pattern="^[a-zA-Z0-9 .]*$"><br><br>
 
                 <label for="email">Enter your email: </label><span class='req-star'>*</span><br>
                 <input type="email" name="email" id="email" required>
@@ -47,7 +47,7 @@
             <fieldset>
                 <legend><strong>Comments</strong></legend>
                 <label>Enter your comments here: </label><span class='req-star'>*</span> <br>
-                <textarea name="textarea" rows="5" cols="50" minlength="20" maxlength="500"></textarea>
+                <textarea name="comments" id="comments" rows="5" cols="50" minlength="20" maxlength="500"></textarea>
                 <p id="comment-length">(20-500 characters)</p>
                 <input type="hidden" name="possible_bot" value="true">
             </fieldset>
@@ -81,6 +81,7 @@
             <address>addutta@ucsd.edu</address>
             Phone number: <span id="phone">858-322-9895</span>
         </div>
+        <script src="form-validity.js"></script>
     </main>
     <hr>
     <footer>

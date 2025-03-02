@@ -317,3 +317,17 @@ form {
     font-size: small;
     margin-top: 0px;
 }
+
+.flash-indicator {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    0% {
+        background-color: lightcoral;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
