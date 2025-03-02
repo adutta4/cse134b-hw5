@@ -297,6 +297,22 @@ form {
     background-color: #a3a3a3;
 }
 
+#contact-form input:user-invalid {
+    border: 2px solid red;
+}
+
+#contact-form input:user-valid {
+    border: 2px solid green;
+}
+
+#contact-form textarea:user-invalid {
+    border: 2px solid red;
+}
+
+#contact-form textarea:user-valid {
+    border: 2px solid green;
+}
+
 #comment-length {
     font-size: small;
     margin-top: 0px;
