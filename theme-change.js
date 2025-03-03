@@ -43,7 +43,7 @@ function setTheme(theme) {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
         if(form) {
-            form.style.setProperty("background-color", '#7c8d94');
+            form.style.setProperty("background-color", '#919da1');
         }
         if(commentCount) {
             commentCount.style.setProperty('color', 'black');
