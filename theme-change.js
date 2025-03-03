@@ -5,6 +5,12 @@ function setTheme(theme) {
     const h3s = document.querySelectorAll('h3');
     const links = document.querySelectorAll('a');
     const navLinks = document.querySelectorAll('nav a');
+    const aside = document.querySelector('aside');
+
+    const toggle = document.getElementById("toggleLabel");
+    if (toggle) {
+        toggle.classList.remove("js-enabled");
+    }
 
     if (theme === 'dark') {
         root.style.setProperty('background', 'var(--bg-color-dark)');
@@ -22,6 +28,8 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
+        aside.style.setProperty('color', 'var(--text-color-light)');
+
     }
     else {
         root.style.setProperty('background', 'var(--bg-color-light)');
@@ -40,6 +48,7 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
+        aside.style.setProperty('color', 'var(--text-color-light)');
     }
 }
 function toggleTheme() {

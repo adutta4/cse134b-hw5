@@ -368,3 +368,7 @@ input:checked + .slider:before {
 input:checked + .slider {
     background-color:  color-mix(in srgb, #052f3f 70%, white 30%);;
 }
+
+.js-enabled {
+    display: none;
+}
