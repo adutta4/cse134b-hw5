@@ -5,7 +5,7 @@ function setTheme(theme) {
     const h3s = document.querySelectorAll('h3');
     const links = document.querySelectorAll('a');
     const navLinks = document.querySelectorAll('nav a');
-    const aside = document.querySelector('aside');
+    const aside = document.getElementById('skill-aside');
 
     const toggle = document.getElementById("toggleLabel");
     if (toggle) {
@@ -28,7 +28,7 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
-        aside.style.setProperty('color', 'var(--text-color-light)');
+        aside.style.setProperty('color', 'black');
 
     }
     else {
@@ -48,7 +48,6 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
-        aside.style.setProperty('color', 'var(--text-color-light)');
     }
 }
 function toggleTheme() {
