@@ -30,6 +30,10 @@
 
     <hr>
     <main>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>
         <h2>Contact</h2>
         <p>To contact me, you can fill out the following form!</p>
         <form action="https://httpbin.org/post" method="post" id="contact-form">
@@ -81,6 +85,7 @@
             Phone number: <span id="phone">858-322-9895</span>
         </div>
         <script src="form-validity.js"></script>
+        <script src="theme-change.js"></script>
     </main>
     <hr>
     <footer>

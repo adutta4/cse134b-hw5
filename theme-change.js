@@ -3,6 +3,8 @@ function setTheme(theme) {
     const h1 = document.querySelector('h1');
     const h2s = document.querySelectorAll('h2');
     const h3s = document.querySelectorAll('h3');
+    const links = document.querySelectorAll('a');
+    const navLinks = document.querySelectorAll('nav a');
 
     if (theme === 'dark') {
         root.style.setProperty('background', 'var(--bg-color-dark)');
@@ -11,9 +13,14 @@ function setTheme(theme) {
         h2s.forEach(element => {
             element.style.setProperty('color', 'var(--text-color-dark)');
         });
-
-        h3Elements.forEach(element => {
+        h3s.forEach(element => {
             element.style.setProperty('color', 'var(--text-color-dark)');
+        });
+        links.forEach(element => {
+            element.style.setProperty('color', 'lightblue');
+        });
+        navLinks.forEach(element => {
+            element.style.setProperty('color', 'var(--main-bg-color)');
         });
     }
     else {
@@ -24,8 +31,14 @@ function setTheme(theme) {
             element.style.setProperty('color', 'var(--main-text-color)');
         });
 
-        h3Elements.forEach(element => {
+        h3s.forEach(element => {
             element.style.setProperty('color', 'var(--main-text-color)');
+        });
+        links.forEach(element => {
+            element.style.setProperty('color', 'blue');
+        });
+        navLinks.forEach(element => {
+            element.style.setProperty('color', 'var(--main-bg-color)');
         });
     }
 }

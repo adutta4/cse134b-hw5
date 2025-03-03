@@ -328,11 +328,6 @@ form {
     background-color: lightcoral;
 }
 
-/* html {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-} */
-
 .switch {
     position: fixed;
     top: 10px;
@@ -347,6 +342,7 @@ form {
 
 .slider {
     position: relative;
+    border: rgba(31, 30, 30, 0.671) 1px solid;
     display: inline-block;
     width: 60px;
     height: 34px;
