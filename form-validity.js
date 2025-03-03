@@ -1,8 +1,8 @@
-let pattern = /^[a-zA-Z0-9 ,.!?]*$/;
+let pattern = /^[a-zA-Z0-9 ,.!?']*$/;
 
 let form = document.getElementById("contact-form");
-let userName = document.getElementById("name");
-let email = document.getElementById("email");
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
 let comments = document.getElementById("comments");
 let commentCount = document.getElementById("comment-count");
 
@@ -57,43 +57,35 @@ comments.addEventListener('input', function () {
     }
 });
 
-userName.addEventListener('input', function () {
-    if (!userName.checkValidity()) {
-        userName.setCustomValidity("Please enter a valid name!");
-    }
-    if (userName.checkValidity()) {
-        userName.setCustomValidity("");
-    }
-});
-
-email.addEventListener('input', function() {
-    if (email.checkValidity()) {
-        email.setCustomValidity("");
-    }
-})
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    // form_errors = [];
-    let isValid = true;
-
-    if (userName.value.length < 2) {
-        userName.setCustomValidity("Please enter your name.");
+nameInput.addEventListener('invalid', function (event) {
+    if (nameInput.value.length < 2) {
+        nameInput.setCustomValidity("Please enter your name");
         form_errors.push({
             field: "name",
             error: "Name not entered or too short",
         })
-        isValid = false;
-    };
+    }
+    else {
+        nameInput.setCustomValidity("");
+    }
+    
+});
 
+email.addEventListener("invalid", (event) => {
     if (email.validity.typeMismatch) {
-        email.setCustomValidity("Please enter a valid email.");
+        email.setCustomValidity("Please enter a valid email address.");
         form_errors.push({
-            field: email,
+            field: "email",
             error: "Invalid email address entered",
-        });
-        isValid = false;
-    };
+        })
+    } else {
+        email.setCustomValidity("");
+    }
+});
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    let isValid = true;
 
     if (comments.value.length == 0) {
         comments.setCustomValidity("Comments are required. Please follow the given guidelines.");
