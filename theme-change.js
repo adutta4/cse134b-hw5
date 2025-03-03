@@ -6,6 +6,11 @@ function setTheme(theme) {
     const links = document.querySelectorAll('a');
     const navLinks = document.querySelectorAll('nav a');
     const aside = document.getElementById('skill-aside');
+    const ths = document.querySelectorAll('th');
+    const labels = document.querySelectorAll('label');
+    const form = document.getElementById('contact-form');
+    const commentLength = document.getElementById('comment-length');
+    const commentCount = document.getElementById('comment-count')
 
     const toggle = document.getElementById("toggleLabel");
     if (toggle) {
@@ -28,12 +33,28 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
-        aside.style.setProperty('color', 'black');
-
+        if (aside) {
+            aside.style.setProperty('color', 'black');
+        }
+        labels.forEach(element => {
+            element.style.setProperty('color', 'black');
+        });
+        ths.forEach(element => {
+            element.style.setProperty('color', 'var(--main-bg-color)');
+        });
+        if(form) {
+            form.style.setProperty("background-color", '#7c8d94');
+        }
+        if(commentCount) {
+            commentCount.style.setProperty('color', 'black');
+        }
+        if(commentLength) {
+            commentLength.style.setProperty('color', 'black');
+        }
     }
     else {
         root.style.setProperty('background', 'var(--bg-color-light)');
-        root.style.setProperty('color', 'var(--text-color-light)');
+        root.style.setProperty('color', 'black');
         h1.style.setProperty('color', 'var(--main-text-color)');
         h2s.forEach(element => {
             element.style.setProperty('color', 'var(--main-text-color)');
@@ -48,6 +69,12 @@ function setTheme(theme) {
         navLinks.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
+        ths.forEach(element => {
+            element.style.setProperty('color', 'var(--main-text-color)');
+        });
+        if(form) {
+            form.style.setProperty("background-color", '#afbec4');
+        }
     }
 }
 function toggleTheme() {
