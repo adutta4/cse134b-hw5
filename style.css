@@ -4,8 +4,8 @@
     font-family: 'Segoe UI', 'Open Sans', 'Arial', sans-serif;
     /* toggle vars */
     --bg-color-light: var(--main-bg-color);
-    --text-color-dark:var(--main-bg-color);
-    --bg-color-dark: #03151dee; 
+    --text-color-dark: var(--main-bg-color);
+    --bg-color-dark: #03151dee;
 }
 
 @font-face {
@@ -350,7 +350,7 @@ form {
     border-radius: 34px;
 }
 
-.slider:before{
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -361,14 +361,43 @@ form {
     border-radius: 50%;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
-input:checked + .slider {
-    background-color:  color-mix(in srgb, #052f3f 70%, white 30%);;
+input:checked+.slider {
+    background-color: color-mix(in srgb, #052f3f 70%, white 30%);
+    ;
 }
 
 .js-enabled {
     display: none;
+}
+
+.project-card {
+    border: .25rem outset var(--main-text-color);
+    background-color: #afbec4;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    width: 90%;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.project-card img {
+    width: 80%;
+    border-radius: 1em;
+    width: 50vw;
+    height: 50vh;
+    object-fit: contain;
 }
