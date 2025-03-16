@@ -1,0 +1,28 @@
+{
+    "projects": [
+      {
+        "project-name": "Chavez Lab Intern at Sanford-Burnham Prebys (2021-present)",
+        "description": "Analyzed tumor samples using AmpliconArchitect to detect the presence of extrachromosomal DNA, using the bioinformatics cloud platform Cavatica. Extensive experience with Python scripts and bioinformatics data types, such as FASTQ and BAM files.",
+        "image": "https://pub-6ad496500cf0446fa228dd29a115090f.r2.dev/ecdna.jpg",
+        "image-description": "Explanation of extrachromosomal DNA formation",
+        "extra-link": "https://chavezlab.org/",
+        "link-name": "Chavez Lab Website"
+      },
+      {
+        "project-name": "CSE 110 Project - Triton Cook (2024)",
+        "description": "Built a web application to allow users to find and share recipes. Used React framework, along with HTML, CSS, and Javascript for frontend and backend. I also worked in a large group, and learned Github, merging, and other software team issues.",
+        "image": "https://pub-6ad496500cf0446fa228dd29a115090f.r2.dev/triton-cook.jpg",
+        "image-description": "Triton Cook app home screen",
+        "extra-link": "https://github.com/maynhile13105/CSE110-Project-TritonCook",
+        "link-name": "Triton Cook Github"
+      },
+      {
+        "project-name": "Software Engineering Intern at Vert Finance (2023)",
+        "description": "Used React framework in existing codebase to work on several pages of Vert Finance's UI, including the accounts page and payments page, among others. Experience in client-side routing with React Router, and experience in making asynchronous REST API calls and handling callbacks.",
+        "image": "https://pub-6ad496500cf0446fa228dd29a115090f.r2.dev/coding-generic-img.jpg",
+        "image-description": "Code on computer screen",
+        "extra-link": "https://vert-one.com/",
+        "link-name": "Vert Finance website"
+      }
+    ]
+  }

@@ -4,12 +4,8 @@ class ProjectCard extends HTMLElement {
   }
 
   connectedCallback() {
-    // HTML and inline style as template literals for easy modification
-
-    // Get current date in JavaScript
     // const currentDate = new Date();
 
-    // Template for component content
     const projName = this.getAttribute('project-name') || 'Unknown Project Name';
     const description = this.getAttribute('description') || 'Unknown Project Description';
     const imageUrl = this.getAttribute('image') || '';
@@ -30,11 +26,4 @@ class ProjectCard extends HTMLElement {
   }
 }
 
-function loadFromLocalStorage() {
-  const projects = JSON.parse(localStorage.getItem('projects') || '[]');
-  return projects;
-}
-
-
-// Define the custom element
 customElements.define('project-card', ProjectCard);

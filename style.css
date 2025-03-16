@@ -401,3 +401,28 @@ input:checked+.slider {
     height: 50vh;
     object-fit: contain;
 }
+
+#load-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.load-button {
+    width: 40%;
+    height: 3em;
+    border: 3px outset var(--main-text-color);
+    cursor: pointer;
+    padding: 0px;
+    background-color: #4f869e3f;
+}
+
+.load-button:hover {
+    background-color: #a3a3a3;
+}
+
+.load-button:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
