@@ -31,7 +31,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Sacramento', 'Segoe UI', 'Arial', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.75em;
     color: #052f3f;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -427,6 +427,26 @@ input:checked+.slider {
     padding: 0px;
     background-color: #4f869e3f;
     border-radius: 40px;
+}
+
+#show-details {
+    width: 20%;
+    height: 2em;
+    border: 2px outset var(--main-text-color);
+    cursor: pointer;
+    padding: 0px;
+    background-color: #4f869e3f;
+    border-radius: 40px;
+}
+
+#show-details:hover {
+    background-color: #a3a3a3;
+}
+
+.show-details:active {
+    box-shadow:
+        inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .load-button:hover {

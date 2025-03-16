@@ -39,9 +39,9 @@
             I have taken courses to learn about important topics in computer science and in biology.
         </p>
         <section>
-            <table>
+            <table id="course-table">
                 <caption>
-                    Relevant Courses as of Fall 2024
+                    Relevant Courses as of Fall 2024, Click show details for more course content information. 
                 </caption>
                 <colgroup>
                     <col span="2" class="course-info">
@@ -70,16 +70,6 @@
                     <td>Spring 2022</td>
                 </tr>
                 <tr>
-                    <th scope="row">BIBC 102</th>
-                    <td>Metabolic Biochemistry</td>
-                    <td>Fall 2023</td>
-                </tr>
-                <tr>
-                    <th scope="row">BIMM 100</th>
-                    <td>Molecular Biology</td>
-                    <td>Fall 2023</td>
-                </tr>
-                <tr>
                     <th scope="row">CSE 181</th>
                     <td>Molecular Sequence Analysis</td>
                     <td>Winter 2024</td>
@@ -95,8 +85,41 @@
                     <td>Fall 2024</td>
                 </tr>
             </table>
+            <button type="button" id="show-details">Show details</button> <br><br>
         </section>
         <script src="theme-change.js"></script>
+        <script>
+            const courseDesc = {
+                    "CSE12": "Use and implementation of basic data structures including linked lists, stacks, and queues. Use of advanced structures such as binary trees and hash tables. Object-oriented design including interfaces, polymorphism, encapsulation, abstract data types, pre-/post-conditions. Recursion. Uses Java and Java Collections.",
+                    "CSE100": "High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables. Also, memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized. Uses C++ and STL.",
+                    "CSE101": "Design and analysis of efficient algorithms with emphasis of nonnumerical algorithms such as sorting, searching, pattern matching, and graph and network algorithms. Measuring complexity of algorithms, time and storage. NP-complete problems.",
+                    "CSE181": "This course covers the analysis of nucleic acid and protein sequences, with an emphasis on the application of algorithms to biological problems. Topics include sequence alignments, database searching, comparative genomics, and phylogenetic and clustering analyses. Pairwise alignment, multiple alignment, DNS sequencing, scoring functions, fast database search, comparative genomics, clustering, phylogenetic trees, gene finding/DNA statistics.",
+                    "CSE182": "This course provides an introduction to the features of biological data, how those data are organized efficiently in databases, and how existing data resources can be utilized to solve a variety of biological problems. Object oriented databases, data modeling and description. Survey of current biological database with respect to above, implementation of a database on a biological topic.",
+                    "CSE110": "Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDEs, version control, and test harnesses."
+                };
+
+            const showDetailsButton = document.getElementById("show-details");
+            showDetailsButton.addEventListener("click", (event) => {
+                let heading = document.querySelector('thead tr');
+                let newCol = document.createElement('th');
+                newCol.setAttribute("scope", "col");
+                newCol.setAttribute("style", "color: var(--main-text-color)");
+                newCol.innerHTML = `Course Details`;
+
+                heading.appendChild(newCol);
+
+                const rows = document.querySelectorAll('tbody tr');
+                console.log(rows);
+
+                rows.forEach((row, index) => {
+                    let courseCode = row.cells[0].textContent.replace(/\s+/g, '');
+                    console.log(courseCode);
+                    row.innerHTML += `<td>${courseDesc[courseCode]}</td>`
+                });
+
+                showDetailsButton.style.display = 'none'
+            });
+        </script>
     </main>
     <hr>
     <footer>
