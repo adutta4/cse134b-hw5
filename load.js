@@ -52,3 +52,33 @@ loadLocalButton.addEventListener("click", (event) => {
         console.error(error.message);
     }
 });
+
+const loadRemoteButton = document.getElementById("load-remote");
+loadRemoteButton.addEventListener('click', fetchDataFromRemote);
+
+async function fetchDataFromRemote() {
+        const url = "https://api.jsonbin.io/v3/b/67d685018561e97a50ecf3ee";
+        try {
+          const response = await fetch(url);
+          console.log(response);
+          if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+          }
+      
+          const json = await response.json();
+          
+          json.record.forEach(proj => {
+            console.log(proj);
+            window.newProject = document.createElement("project-card");
+            window.newProject.setAttribute("project-name", proj.project_name);
+            window.newProject.setAttribute("description", proj.description);
+            window.newProject.setAttribute("image", proj.image);
+            window.newProject.setAttribute("image-description", proj.image_description);
+            window.newProject.setAttribute("extra-link", proj.extra_link);
+            window.newProject.setAttribute("link-name", proj.link_name);
+            document.getElementById("gallery").appendChild(window.newProject);
+        });
+        } catch (error) {
+          console.error(error.message);
+        }
+};
