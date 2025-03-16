@@ -404,17 +404,18 @@ input:checked+.slider {
 
 #load-buttons {
     display: flex;
-    gap: 30px;
+    gap: 5%;
     justify-content: center;
 }
 
 .load-button {
-    width: 40%;
+    width: 30%;
     height: 3em;
     border: 3px outset var(--main-text-color);
     cursor: pointer;
     padding: 0px;
     background-color: #4f869e3f;
+    border-radius: 40px;
 }
 
 .load-button:hover {
