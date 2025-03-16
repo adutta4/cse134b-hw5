@@ -6,6 +6,8 @@
     --bg-color-light: var(--main-bg-color);
     --text-color-dark: var(--main-bg-color);
     --bg-color-dark: #03151dee;
+    --form-bg-color-dark: #919da1;
+    --form-bg-color-light: #afbec4;
 }
 
 @font-face {
@@ -150,16 +152,25 @@ fieldset {
     border-color: var(--main-text-color);
 }
 
-table,
-th,
-td {
-    border: 1px outset;
-    border-radius: 0.25em;
-    border-color: var(--main-text-color, black);
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(36, 35, 35);
 }
 
-th {
-    color: var(--main-text-color, black);
+th,
+td {
+    border: 1px solid rgb(61, 56, 56);
+    padding: 8px 10px;
+}
+
+thead {
+    background-color: var(--form-bg-color-light);
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
 }
 
 aside {
@@ -410,7 +421,7 @@ input:checked+.slider {
 
 .load-button {
     width: 30%;
-    height: 3em;
+    height: 4em;
     border: 3px outset var(--main-text-color);
     cursor: pointer;
     padding: 0px;
@@ -424,6 +435,6 @@ input:checked+.slider {
 
 .load-button:active {
     box-shadow:
-      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+        inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
