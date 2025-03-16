@@ -13,9 +13,9 @@ function setTheme(theme) {
     const commentCount = document.getElementById('comment-count')
 
     const toggle = document.getElementById("toggleLabel");
-    if (toggle) {
-        toggle.classList.remove("js-enabled");
-    }
+    // if (toggle) {
+    //     toggle.classList.remove("js-enabled");
+    // }
 
     if (theme === 'dark') {
         root.style.setProperty('background', 'var(--bg-color-dark)');
