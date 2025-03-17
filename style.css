@@ -8,6 +8,8 @@
     --bg-color-dark: #03151dee;
     --form-bg-color-dark: #919da1;
     --form-bg-color-light: #afbec4;
+    --card-bg-color-dark: #2e4b57;
+    --card-bg-color-light: #afbec4;
 }
 
 @font-face {

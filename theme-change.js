@@ -10,12 +10,23 @@ function setTheme(theme) {
     const labels = document.querySelectorAll('label');
     const form = document.getElementById('contact-form');
     const commentLength = document.getElementById('comment-length');
-    const commentCount = document.getElementById('comment-count')
+    const commentCount = document.getElementById('comment-count');
+    const localButton = document.getElementById("load-local");
+    const remoteButton = document.getElementById("load-remote");
+    const projectCards = document.getElementsByClassName('project-card');
 
     if (theme === 'dark') {
+        console.log('dark theme');
+        console.log(projectCards);
         root.style.setProperty('background', 'var(--bg-color-dark)');
         root.style.setProperty('color', 'var(--text-color-dark)');
         h1.style.setProperty('color', 'var(--text-color-dark)');
+        localButton.style.setProperty('background-color', '#4f869e');
+        remoteButton.style.setProperty('background-color', '#4f869e');
+        Array.from(projectCards).forEach(card => {
+            card.style.setProperty('background-color', 'var(--card-bg-color-dark)');
+        });
+
         h2s.forEach(element => {
             element.style.setProperty('color', 'var(--text-color-dark)');
         });
@@ -37,13 +48,13 @@ function setTheme(theme) {
         ths.forEach(element => {
             element.style.setProperty('color', 'var(--main-bg-color)');
         });
-        if(form) {
+        if (form) {
             form.style.setProperty("background-color", 'var(--form-bg-color-dark)');
         }
-        if(commentCount) {
+        if (commentCount) {
             commentCount.style.setProperty('color', 'black');
         }
-        if(commentLength) {
+        if (commentLength) {
             commentLength.style.setProperty('color', 'black');
         }
     }
@@ -51,6 +62,11 @@ function setTheme(theme) {
         root.style.setProperty('background', 'var(--bg-color-light)');
         root.style.setProperty('color', 'black');
         h1.style.setProperty('color', 'var(--main-text-color)');
+        localButton.style.setProperty('background-color', '#4f869e3f');
+        remoteButton.style.setProperty('background-color', '#4f869e3f');
+        Array.from(projectCards).forEach(card => {
+            card.style.setProperty('background-color', 'var(--card-bg-color-light)');
+        });
         h2s.forEach(element => {
             element.style.setProperty('color', 'var(--main-text-color)');
         });
@@ -67,7 +83,7 @@ function setTheme(theme) {
         ths.forEach(element => {
             element.style.setProperty('color', 'var(--main-text-color)');
         });
-        if(form) {
+        if (form) {
             form.style.setProperty("background-color", 'var(--form-bg-color-light)');
         }
     }
