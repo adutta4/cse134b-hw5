@@ -14,6 +14,8 @@ function setTheme(theme) {
     const localButton = document.getElementById("load-local");
     const remoteButton = document.getElementById("load-remote");
     const projectCards = document.getElementsByClassName('project-card');
+    let thead = document.querySelector('thead');
+    let table = document.querySelector('table');
 
     if (theme === 'dark') {
         console.log('dark theme');
@@ -61,6 +63,12 @@ function setTheme(theme) {
         if (commentLength) {
             commentLength.style.setProperty('color', 'black');
         }
+        if (thead){
+            thead.style.setProperty('background-color', 'black');
+        };
+        if (table){
+            table.style.setProperty('border', 'white 2px solid');
+        };
     }
     else {
         root.style.setProperty('background', 'var(--bg-color-light)');
@@ -93,6 +101,12 @@ function setTheme(theme) {
         };
         if (remoteButton) {
             remoteButton.style.setProperty('background-color', '#4f869e3f');
+        };
+        if (thead) {
+            thead.style.setProperty('background-color', 'var(--form-bg-color-light');
+        };
+        if (table){
+            table.style.setProperty('border', '2px solid rgb(36, 35, 35)');
         };
     }
 }
