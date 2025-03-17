@@ -9,6 +9,7 @@ class ProjectCard extends HTMLElement {
     const projName = this.getAttribute('project-name') || 'Unknown Project Name';
     const description = this.getAttribute('description') || 'Unknown Project Description';
     const imageUrl = this.getAttribute('image') || '';
+    const secImgUrl = this.getAttribute('secondary-image') || '';
     const imageDesc = this.getAttribute('image-description') || 'Image not found';
     const extraLink = this.getAttribute('extra-link') || '';
     const linkName = this.getAttribute('link-name') || 'Link not available';
@@ -18,7 +19,9 @@ class ProjectCard extends HTMLElement {
           <h3>${projName}</h3>
           <p>${description}</p>
           <picture>
-                <img src=${imageUrl} alt=${imageDesc}>
+                <source media="(max-width: 650px)" srcset=${secImgUrl}>
+                <source media="(min-width: 651px)" srcset="${imageUrl}">
+                <img src="${imageUrl}" alt=${imageDesc}>
             </picture>
             <p>Further reading: <a href=${extraLink} target="_blank">${linkName}</a></p>
         </div>
